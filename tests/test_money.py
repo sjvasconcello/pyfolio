@@ -8,16 +8,16 @@ class TestMoney(unittest.TestCase):
         self.money = Money(1000)
     
     def test_pv_discreto(self):
-        self.assertTrue(isclose(self.money.pv(0.05, 10, 'd'), 613.91, rel_tol=1e-2))
+        self.assertTrue(isclose(self.money.pv(0.05, 10), 613.91, rel_tol=1e-2))
 
     def test_pv_continuo(self):
-        self.assertTrue(isclose(self.money.pv(0.05, 10, 'c'), 606.53, rel_tol=1e-2))
+        self.assertTrue(isclose(self.money.pv(0.05, 10, False), 606.53, rel_tol=1e-2))
 
     def test_fv_discreto(self):
-        self.assertTrue(isclose(self.money.fv(0.05, 10, 'd'), 1628.89, rel_tol=1e-2))
+        self.assertTrue(isclose(self.money.fv(0.05, 10), 1628.89, rel_tol=1e-2))
 
     def test_fv_continuo(self):
-        self.assertTrue(isclose(self.money.fv(0.05, 10, 'c'), 1648.72, rel_tol=1e-2))
+        self.assertTrue(isclose(self.money.fv(0.05, 10, False), 1648.72, rel_tol=1e-2))
 
     def test_invalid_pv_argument(self):
         with self.assertRaises(ValueError):

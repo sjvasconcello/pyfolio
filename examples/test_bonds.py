@@ -31,4 +31,5 @@ class TestBond(unittest.TestCase):
             CouponBond(1000, 10, 0.05, 0.04, type_m='x')
 
 if __name__ == '__main__':
-    unittest.main()
+    pass
+    #unittest.main()
