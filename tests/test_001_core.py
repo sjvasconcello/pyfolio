@@ -1,5 +1,4 @@
 
-
 import unittest
 from pyfolio.core import main_function
 

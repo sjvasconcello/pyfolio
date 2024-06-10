@@ -5,6 +5,7 @@ from pyfolio.money import Money
 
 class TestMoney(unittest.TestCase):
     def setUp(self):
+        """Set Up de Money"""
         self.money = Money(1000)
     
     def test_pv_discreto(self):
@@ -28,4 +29,4 @@ class TestMoney(unittest.TestCase):
             self.money.fv(0.05, 10, 'x')
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

@@ -1,3 +1,4 @@
+
 import unittest
 from pyfolio.bonds import ZeroCouponBond, CouponBond
 
@@ -19,7 +20,7 @@ class TestBond(unittest.TestCase):
         # Test calcular precio
         self.assertAlmostEqual(bond.calculate_price(), 922.78, delta=0.01)
 
-        #! Test representación de cadena
+        # Test representación de cadena
         self.assertEqual(repr(bond), "CouponBond(1000, 10, 0.05, 0.04)")
 
     def test_invalid_type(self):
@@ -31,4 +32,4 @@ class TestBond(unittest.TestCase):
             CouponBond(1000, 10, 0.05, "x")
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)
