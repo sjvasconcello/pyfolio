@@ -7,3 +7,7 @@ A library to study quantitative finance using python
 ```bash
 python -m unittest discover -s tests -v
 ```
+or 
+```bash
+pytest -v
+```
