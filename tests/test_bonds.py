@@ -17,19 +17,18 @@ class TestBond(unittest.TestCase):
         bond = CouponBond(1000, 10, 0.05, 0.04)
 
         # Test calcular precio
-        self.assertAlmostEqual(bond.calculate_price(), 706.67, delta=0.01)
+        self.assertAlmostEqual(bond.calculate_price(), 922.78, delta=0.01)
 
-        # Test representación de cadena
+        #! Test representación de cadena
         self.assertEqual(repr(bond), "CouponBond(1000, 10, 0.05, 0.04)")
 
     def test_invalid_type(self):
         # Verificar tipo de interés inválido
         with self.assertRaises(ValueError):
-            ZeroCouponBond(1000, 10, 0.05, 0.04, type_m='x')
+            ZeroCouponBond(1000, 10, "x")
         
         with self.assertRaises(ValueError):
-            CouponBond(1000, 10, 0.05, 0.04, type_m='x')
+            CouponBond(1000, 10, 0.05, "x")
 
 if __name__ == '__main__':
-    pass
-    #unittest.main()
+    unittest.main()

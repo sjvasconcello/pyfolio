@@ -1,6 +1,5 @@
-
+#%%
 from math import exp
-from typing import Union
 
 class Money:
     def __init__(self, amount: float = 0):
@@ -12,7 +11,7 @@ class Money:
         # Amount of money
         self.amount = amount
     
-    def _amount(self):
+    def amount(self):
         """
         Returns the amount of money.
 
